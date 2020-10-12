@@ -16,15 +16,15 @@ class QuestSeeder extends Seeder
     {
         DB::table('quests')->insert([
             'name' => 'Гарри и последний крестраж',
-            'img' => base_path() . '/database/seeders/images/1.jpeg',
+            'img' => '/images/1.jpeg',
         ]);
         DB::table('quests')->insert([
             'name' => 'Иллюзия обмана',
-            'img' => base_path() . '/database/seeders/images/2.jpeg',
+            'img' => '/images/2.jpeg',
         ]);
         DB::table('quests')->insert([
             'name' => 'Игры Престолов',
-            'img' => base_path() . '/database/seeders/images/3.jpeg',
+            'img' => '/images/3.jpeg',
         ]);
         //
     }

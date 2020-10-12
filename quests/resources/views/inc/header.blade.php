@@ -11,7 +11,7 @@
 
     <!-- Js -->
 
-    <script src="/public/app.js"></script>
+    <script src="/js/app.js"></script>
 
     <!-- Styles -->
 
