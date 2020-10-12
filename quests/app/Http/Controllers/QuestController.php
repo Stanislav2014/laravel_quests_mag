@@ -65,10 +65,10 @@ class QuestController extends Controller
 
         $index = 0;
 
-        while() {
-
-            $index++;
-        }
+//        while() {
+//
+//            $index++;
+//        }
 
             $index = 0;
 
