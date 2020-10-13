@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Quest;
 use Carbon\Carbon;
 use Validator;
 use App\Models\Event;
 
-class QuestController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +18,10 @@ class QuestController extends Controller
      */
     public function index()
     {
-        return view('index', ['quests' => Quest::all()]);
+        $events = Event::orderBy('id', 'ASC')->paginate(15);
+//        $events = Event::find(1)->quest();
+
+        return view('home', ['events' => $events]);
     }
 
     /**
@@ -38,26 +42,6 @@ class QuestController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'date' => 'required',
-            ]);
-        $questId = $request->input('quest_id');
-
-        $event = new Event();
-
-        $event->quest_id = $questId;
-        $event->user_name = $request->input('name');
-        $event->user_email = $request->input('email');
-        $event->user_phone = $request->input('phone');
-        $event->event_date = Carbon::create($request->input('date'))->format('Y-m-d H:i');
-        $event->status = 'N';
-//        dd($event);
-        $event->save();
-
-        return redirect()->route('quests.show', ['quest' => $questId])->with('message', 'Квест успешно забронирован');
 
     }
 
@@ -70,11 +54,6 @@ class QuestController extends Controller
     public function show($id)
     {
 
-
-        return view('show', [
-            'quest' => Quest::find($id),
-            'currentDate'=> Carbon::today()->format('Y-m-d'),
-        ]);
 
     }
 

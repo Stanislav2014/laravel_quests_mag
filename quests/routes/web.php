@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuestController;
+use App\Http\Controllers\Admin\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,9 @@ Route::get('/', function () {
 });
 
 Route::resource('quests', QuestController::class);
+
+Route::group(['middleware' => 'auth', 'middleware' => 'access:admin'], function () {
+    Route::get('/admin', 'App\Http\Controllers\Admin\EventController@index');
+});
+
+Auth::routes();

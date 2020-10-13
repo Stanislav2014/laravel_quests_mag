@@ -23,7 +23,7 @@ class CreateEventsTable extends Migration
                 ->on('quests')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-            $table->date('event_date');
+            $table->dateTime('event_date');
             $table->string('user_name');
             $table->string('user_email');
             $table->string('user_phone');

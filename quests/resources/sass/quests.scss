@@ -1,0 +1,26 @@
+.s-selected-time, .s-selected-time.s-empty {
+    background-color: #ca4b63;
+}
+
+.s-date_item {
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.s-time_item {
+    padding: 10px;
+    width: 200px;
+}
+
+.s-time_item_textwhite {
+    color: #FFFFFF;
+}
+
+.s-empty {
+    cursor: pointer;
+    background-color: #1b4b72;
+}
+.s-busy {
+    background-color: #545b62;
+}
