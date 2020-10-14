@@ -24,3 +24,22 @@
 .s-busy {
     background-color: #545b62;
 }
+
+.s-shedule-container {
+    > div {
+        display: flex;
+        flex-wrap: wrap;
+
+        > div {
+            flex: 0 1 25%;
+
+        }
+
+        > div:nth-child(1) {
+            padding: 10px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    }
+
+}

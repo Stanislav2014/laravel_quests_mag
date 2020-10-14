@@ -19,8 +19,13 @@
                         @if(isset($events))
                             <div class="row">
                             @foreach($events as $event)
+
                                 <div class="s-event_item col-12" data-event-id="{{$event->id}}">
                                     <div class="row">
+                                        <div class="col-2">
+                                            <h3>Квест</h3>
+                                            <div>{{$event->quest->name}}</div>
+                                        </div>
                                         <div class="col-2">
                                             <h3>Дата</h3>
                                             <div>{{$event->event_date}}</div>

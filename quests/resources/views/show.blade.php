@@ -15,7 +15,7 @@
         >
     </div>
 
-    <div id="sheduleContainer" data-quest-id="{{ $quest->id }}"></div>
+    <div id="sheduleContainer" class="s-shedule-container" data-quest-id="{{ $quest->id }}"></div>
 
     @include('inc.questform')
 
