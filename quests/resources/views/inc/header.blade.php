@@ -11,7 +11,7 @@
 
     <!-- Js -->
 
-    <script src="/js/app.js"></script>
+
 
     <!-- Styles -->
 
@@ -22,5 +22,6 @@
 <body>
 
 <header>
+
 
 </header>
